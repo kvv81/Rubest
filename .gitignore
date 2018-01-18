@@ -5,3 +5,4 @@ release/*.d
 release/*.o
 release/Rubest*
 Rubest.tag
+DoxyDoc/
