@@ -4,7 +4,7 @@ bool CRubanCombination::operator==(const CRubanCombination &b) const
 {
 	if(_length != b._length) return false;
 
-	for(register int i=_length; i--; )
+	for(int i=_length; i--; )
 	{
 		if(_ops[i] != b._ops[i])
 			return false;
@@ -25,7 +25,7 @@ SUnpackedRubanState CRubanCombination::Execute(const SUnpackedRubanState &src) c
 void CRubanCombination::GetCombinationInvariant(int invariant_num, CRubanCombination &dst) const
 {
 	dst.SetLength(_length);
-	for(register int i=_length; i-- ;)
+	for(int i=_length; i-- ;)
 		dst._ops[i] = _ops[i].GetInvariant(invariant_num);
 }
 

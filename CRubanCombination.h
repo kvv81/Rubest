@@ -17,7 +17,7 @@ public:
 	CRubanCombination(unsigned char length=0) : _length(length) {}
 	CRubanCombination(const CRubanCombination &b) : _length(b._length)
 	{
-		for(register int i=_length; i--; )	// !! NOTE - don't copy all _ops, only defined
+		for(int i=_length; i--; )	// !! NOTE - don't copy all _ops, only defined
 			_ops[i]=b._ops[i];
 	}
 

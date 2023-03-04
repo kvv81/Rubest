@@ -16,7 +16,7 @@
 #define WND_YSIZE 768
 #define WND_XSIZE ((int)(WND_YSIZE*WND_ASPECT))
 
-#define ACCUM_FACTOR 0.1f /* 0.5f */
+#define ACCUM_FACTOR 0.01f /* 0.5f */
 
 // GLUT demo programm
 static bool is_motion_blur = false;

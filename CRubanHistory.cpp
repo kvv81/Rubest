@@ -46,7 +46,7 @@ void SHistoryNode::GetAccomplishedCombination(CRubanCombination &dst)
 
 bool CStatesHistory::LookupState(SPackedRubanState &state, SHistoryNode *p)
 {
-	register int cmp_res = p->state.Compare(state);
+	int cmp_res = p->state.Compare(state);
 	if(cmp_res==0) return true;
 	if(cmp_res<0)	// p->state < state
 	{
@@ -66,7 +66,7 @@ void CStatesHistory::AddState(SPackedRubanState &state, SAllocatorIndex index)
 {
 	SHistoryNode *p=allocator.GetItem(index);
 
-	register int cmp_res = p->state.Compare(state);
+	int cmp_res = p->state.Compare(state);
 	if(cmp_res==0)
 	{
 //		assert(AM_ADDSTATE_TRIES_TO_ADD_THE_SAME_STATE);	// state already present???

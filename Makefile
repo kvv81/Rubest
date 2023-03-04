@@ -18,7 +18,7 @@ DST=$(MODE)
 CC = g++
 CFLAGS_debug = -O0 -g
 CFLAGS_release = -O3
-CFLAGS=$(CFLAGS_$(MODE))
+CFLAGS=--std=c++11 $(CFLAGS_$(MODE))
 
 SOURCES=$(COMMON_CPP) $(VIEWER_CPP) Rubest.cpp
 COMMON_OBJ = $(addprefix $(DST)/,$(subst .cpp,.o,$(COMMON_CPP)))

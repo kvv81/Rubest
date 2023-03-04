@@ -100,7 +100,7 @@ public:
 	{
 		assert(index.IsValid());
 		
-		register unsigned long i = (unsigned long) index;
+		unsigned long i = (unsigned long) index;
 		return _blocks[i>>_block_size_exponent] + (i & _offset_in_block_mask);
 	}
 
